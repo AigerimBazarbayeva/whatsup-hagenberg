@@ -2,9 +2,6 @@
 <ion-header>
   <ion-toolbar color="reallydark">
     <ion-buttons start>
-      <button ion-button icon-only color="royal">
-        <ion-icon name="search"></ion-icon>
-      </button>
     </ion-buttons>
     <ion-title></ion-title>
     <ion-buttons end>
@@ -43,7 +40,7 @@
           <h3>30.05.2018</h3>
           <p>16:00 Uhr</p>
           <p><ion-icon name="pin"></ion-icon>Softwarepark Hagenberg</p>
-          <button ion-button round color="knallorange">Details
+          <button ion-button round color="knallorange" (click)="detailsTapped()">Details
             <ion-icon name="arrow-forward"></ion-icon>
           </button>
         </ion-slide>
@@ -67,20 +64,32 @@
             <ion-icon name="arrow-forward"></ion-icon>
           </button>
         </ion-slide>
-
       </ion-slides>
     </ion-list>
 
     <ion-list *ngSwitchCase="'today'">
-      <ion-item>
-        Today
-      </ion-item>
-      <ion-item>
-        Today
-      </ion-item>
-      <ion-item>
-        Today
-      </ion-item>
+      <ion-slides pager>
+        <ion-slide>
+          <img src="assets/imgs/international.jpg" class="slide-image"/>
+          <h2 class="slide-title">International Evening</h2>
+          <h3>20.04.2018</h3>
+          <p>19:00 Uhr</p>
+          <p><ion-icon name="pin"></ion-icon>Softwarepark Hagenberg</p>
+          <button ion-button round color="knallorange">Details
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </ion-slide>
+        <ion-slide>
+          <img src="assets/imgs/karrieremesse.png" class="slide-image"/>
+          <h2 class="slide-title">International Evening</h2>
+          <h3>22.08.2018</h3>
+          <p>19:00 Uhr</p>
+          <p><ion-icon name="pin"></ion-icon>Softwarepark Hagenberg</p>
+          <button ion-button round color="knallorange">Details
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </ion-slide>
+      </ion-slides>
     </ion-list>
   </div>
 </ion-content>

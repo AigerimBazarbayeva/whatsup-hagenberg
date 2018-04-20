@@ -1,4 +1,5 @@
 page-home{
+
     body {
       overflow-y: hidden;
     }
@@ -8,7 +9,13 @@ page-home{
     }
 
     .slide-title {
-      margin-top: 1rem;
+      margin-top: 2rem;
+      font-size: 28px;
+    }
+
+    .slider-pager {
+      padding: 0 auto;
+      margin: 0 auto;
     }
 
     .slide-image {
@@ -20,16 +27,18 @@ page-home{
     }
 
     p {
-      padding: 0 0px;
-      font-size: 14px;
-      line-height: 1;
+      padding: 0;
+      font-size: 20px;
+      line-height: 0.5em;
       color: #60646B;
 
       b {
         color: #000000;
       }
     }
-
+    ion-icon {
+      padding-right: 10px;
+    }
 
 }
 

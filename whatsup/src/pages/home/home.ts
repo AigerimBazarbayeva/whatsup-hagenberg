@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+
 import { Platform } from 'ionic-angular';
+
+import {DetailPage} from '../detail/detail';
 
 @Component({
   selector: 'page-home',
@@ -13,6 +16,7 @@ export class EventPage {
   constructor(platform: Platform) {
     this.isAndroid = platform.is('android');
   }
+
 
   slides = [
     {

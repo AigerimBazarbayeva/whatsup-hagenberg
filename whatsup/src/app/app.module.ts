@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { EventPage } from '../pages/home/home';
-import {DetailPage} from '../pages/detail/detail';
+import { DetailPage } from '../pages/detail/detail';
 
 @NgModule({
   declarations: [

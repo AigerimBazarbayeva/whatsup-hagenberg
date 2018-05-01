@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-
-import { Platform } from 'ionic-angular';
+import {NavController} from 'ionic-angular';
 
 import {DetailPage} from '../detail/detail';
 
@@ -11,30 +10,28 @@ import {DetailPage} from '../detail/detail';
 
 export class EventPage {
   eventType: string = "today";
-  isAndroid: boolean = false;
+  items: any[];
 
-  constructor(platform: Platform) {
-    this.isAndroid = platform.is('android');
+  constructor(public navCtrl: NavController ) {
+    this.items = [];
+    for (let i=0; i<3; i++){
+      this.items.push({
+        text: "Event" + i,
+        id: i,
+        image: "../../assets/imgs/international.jpg",
+        description: "Hallo das ist die Description",
+        date: "19.06.2018",
+        time: "17:00 Uhr",
+        location: "Softwarepark Hagenberg",
+      });
+    }
   }
 
-
-  slides = [
-    {
-      title: "Welcome to the Docs!",
-      description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
-      image: "assets/img/ica-slidebox-img-1.png",
-    },
-    {
-      title: "What is Ionic?",
-      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-      image: "assets/img/ica-slidebox-img-2.png",
-    },
-    {
-      title: "What is Ionic Cloud?",
-      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      image: "assets/img/ica-slidebox-img-3.png",
-    }
-  ];
+  showEventDetails(item){
+    this.navCtrl.push(DetailPage, {
+      item: item
+    });
+  }
 }
 
 

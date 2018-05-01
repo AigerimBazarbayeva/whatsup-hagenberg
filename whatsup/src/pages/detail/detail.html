@@ -5,14 +5,49 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>detail</ion-title>
+  <ion-navbar color="reallydark">
+    <ion-buttons start>
+    </ion-buttons>
+    <ion-title></ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        Login <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content>
+  <img [src]="item.image" class="slide-image"/>
+  <h2 class="slide-title" [innerHTML]="item.text"></h2>
+  <h3 [innerHTML]="item.date"></h3>
+  <p [innerHTML]="item.time"></p>
+  <p [innerHTML]="item.location"><ion-icon name="pin"></ion-icon></p>
 
-<ion-content padding>
+  <ion-fab right bottom>
+    <button ion-fab color="danger"><ion-icon name="md-share"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab color="primary"><ion-icon name="logo-facebook"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="bottom">
+      <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="left">
+      <button ion-fab color="light"><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+    <ion-fab-list side="right">
+      <button ion-fab color="dark"><ion-icon name="logo-twitter"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab left bottom>
+    <button ion-fab color="knallorange"><ion-icon name="pin"></ion-icon></button>
+  </ion-fab>
+
+
+    <button ion-button color="hellesblue" round icon-start>
+      <ion-icon name='add' is-active="false"></ion-icon>
+      Join Event
+    </button>
 
 </ion-content>

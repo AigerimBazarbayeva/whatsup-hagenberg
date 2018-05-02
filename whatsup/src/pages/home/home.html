@@ -33,32 +33,12 @@
   <div [ngSwitch]="eventType">
     <ion-list *ngSwitchCase="'upcoming'">
       <ion-slides pager>
-        <ion-slide>
-          <img src="assets/imgs/sommerfest.png" class="slide-image"/>
-          <h2 class="slide-title">Sommerfest</h2>
-          <h3>30.05.2018</h3>
-          <p>16:00 Uhr</p>
-          <p><ion-icon name="pin"></ion-icon>Softwarepark Hagenberg</p>
-          <button ion-button round color="knallorange" (click)="showEventDetails(item)">Details
-            <ion-icon name="arrow-forward"></ion-icon>
-          </button>
-        </ion-slide>
-        <ion-slide>
-        <img src="assets/imgs/international.jpg" class="slide-image"/>
-        <h2 class="slide-title">International Evening</h2>
-        <h3>17.06.2018</h3>
-        <p>19:00 Uhr</p>
-        <p><ion-icon name="pin"></ion-icon>Softwarepark Hagenberg</p>
-        <button ion-button round color="knallorange" (click)="showEventDetails(item)">Details
-          <ion-icon name="arrow-forward"></ion-icon>
-        </button>
-        </ion-slide>
-        <ion-slide>
-          <img src="assets/imgs/karrieremesse.png" class="slide-image"/>
-          <h2 class="slide-title">International Evening</h2>
-          <h3>22.08.2018</h3>
-          <p>19:00 Uhr</p>
-          <p><ion-icon name="pin"></ion-icon>Softwarepark Hagenberg</p>
+        <ion-slide *ngFor="let item of items">
+          <img [src]="item.image" class="slide-image"/>
+          <h2 class="slide-title" [innerHTML]="item.text"></h2>
+          <h3 [innerHTML]="item.date"></h3>
+          <p [innerHTML]="item.time"></p>
+          <p [innerHTML]="item.location"><ion-icon name="pin"></ion-icon></p>
           <button ion-button round color="knallorange" (click)="showEventDetails(item)">Details
             <ion-icon name="arrow-forward"></ion-icon>
           </button>
@@ -79,17 +59,6 @@
           </button>
         </ion-slide>
       </ion-slides>
-        <!--ion-slide>
-          <img src="assets/imgs/karrieremesse.png" class="slide-image"/>
-          <h2 class="slide-title">International Evening</h2>
-          <h3>22.08.2018</h3>
-          <p>19:00 Uhr</p>
-          <p><ion-icon name="pin"></ion-icon>Softwarepark Hagenberg</p>
-          <button ion-button round color="knallorange" (click)="showEventDetails(item)">Details
-            <ion-icon name="arrow-forward"></ion-icon>
-          </button>
-        </ion-slide>
-      </ion-slides-->
     </ion-list>
   </div>
 </ion-content>

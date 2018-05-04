@@ -25,7 +25,7 @@ export class EventPage {
       ref => ref.orderByChild("date").equalTo(dateString));
     this.todayEvent = this.todayEventList.valueChanges();
     this.upcomingEventList = this.afDB.list('/events');
-    this.upcomingEvent = this.upcomingEventList.valueChanges();
+    this.upcomingEvent = this.upcomingEventList.valueChanges().map(qis => qis.filter(q => q.date != dateString));
   }
 
   showEventDetails(item) {

@@ -18,8 +18,15 @@
 </ion-header>
 
 <ion-content>
+  <div>
   <img [src]="item.image" class="slide-image"/>
-  <h2 class="slide-title" [innerHTML]="item.text"></h2>
+  <button class="btn-join" ion-button color="hellesblue" round icon-start (click)="showPrompt()">
+    <ion-icon name='add' is-active="false"></ion-icon>
+    Join Event
+  </button>
+  </div>
+  <div padding-left padding-right padding-bottom>
+  <h2 class="details-title" [innerHTML]="item.text"></h2>
   <h3 [innerHTML]="item.date"></h3>
   <p [innerHTML]="item.time"></p>
   <p [innerHTML]="item.location"><ion-icon name="pin"></ion-icon></p>
@@ -47,9 +54,7 @@
   </ion-fab>
 
 
-    <button ion-button color="hellesblue" round icon-start>
-      <ion-icon name='add' is-active="false"></ion-icon>
-      Join Event
-    </button>
+
+  </div>
 
 </ion-content>

@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 
 import {DetailPage} from '../detail/detail';
+import {LoginPage} from '../login/login';
 import {AngularFireDatabase, AngularFireList} from "angularfire2/database";
 import {Observable} from "rxjs/Observable";
 
@@ -30,6 +31,11 @@ export class EventPage {
   showEventDetails(item) {
     this.navCtrl.push(DetailPage, {
       item: item
+    });
+  }
+
+  showLoginPage() {
+    this.navCtrl.push(LoginPage, {
     });
   }
 }

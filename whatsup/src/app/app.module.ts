@@ -8,6 +8,21 @@ import { MyApp } from './app.component';
 import { EventPage } from '../pages/home/home';
 import { DetailPage } from '../pages/detail/detail';
 
+// Import the AF2 Module
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+
+// AF2 Settings
+export const firebaseConfig = {
+  apiKey: "AIzaSyCjOea4AeNGf8dS_LfdeayAEcZqU7svepI",
+  authDomain: "whatsup-hagenberg-9c919.firebaseapp.com",
+  databaseURL: "https://whatsup-hagenberg-9c919.firebaseio.com",
+  projectId: "whatsup-hagenberg-9c919",
+  storageBucket: "whatsup-hagenberg-9c919.appspot.com",
+  messagingSenderId: "201113993607"
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -16,7 +31,9 @@ import { DetailPage } from '../pages/detail/detail';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

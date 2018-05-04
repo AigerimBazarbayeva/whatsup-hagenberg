@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 
 import {DetailPage} from '../detail/detail';
+import {AngularFireDatabase, AngularFireList} from "angularfire2/database";
+import {Observable} from "rxjs/Observable";
 
 @Component({
   selector: 'page-home',
@@ -9,25 +11,23 @@ import {DetailPage} from '../detail/detail';
 })
 
 export class EventPage {
-  eventType: string = "today";
-  items: any[];
+  todayEventList: AngularFireList<any>;
+  upcomingEventList: AngularFireList<any>;
+  todayEvent: Observable<any[]>;
+  upcomingEvent: Observable<any[]>;
 
-  constructor(public navCtrl: NavController ) {
-    this.items = [];
-    for (let i=0; i<3; i++){
-      this.items.push({
-        text: "Event" + i,
-        id: i,
-        image: "../../assets/imgs/international.jpg",
-        description: "Hallo das ist die Description",
-        date: "19.06.2018",
-        time: "17:00 Uhr",
-        location: "Softwarepark Hagenberg",
-      });
-    }
+
+  constructor(public navCtrl: NavController,
+              public afDB: AngularFireDatabase) {
+    var dateString = new Date().toJSON().slice(0,10).split('-').reverse().join('.');
+    this.todayEventList = this.afDB.list('/events',
+      ref => ref.orderByChild("date").equalTo(dateString));
+    this.todayEvent = this.todayEventList.valueChanges();
+    this.upcomingEventList = this.afDB.list('/events');
+    this.upcomingEvent = this.upcomingEventList.valueChanges();
   }
 
-  showEventDetails(item){
+  showEventDetails(item) {
     this.navCtrl.push(DetailPage, {
       item: item
     });

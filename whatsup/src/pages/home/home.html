@@ -5,7 +5,7 @@
     </ion-buttons>
     <ion-title></ion-title>
     <ion-buttons end>
-      <button ion-button icon-only color="royal">
+      <button ion-button icon-only color="royal" (click)="showLoginPage()">
         Login <ion-icon name="contact"></ion-icon>
       </button>
     </ion-buttons>
@@ -39,7 +39,7 @@
           <h3 [innerHTML]="item.date"></h3>
           <p [innerHTML]="item.time"></p>
           <p [innerHTML]="item.location"><ion-icon name="pin"></ion-icon></p>
-          <button ion-button round color="knallorange" (click)="showEventDetails(item)">Details
+          <button ion-button round class="btn-details" color="knallorange" (click)="showEventDetails(item)">Details
             <ion-icon name="arrow-forward"></ion-icon>
           </button>
         </ion-slide>
@@ -54,7 +54,7 @@
           <h3 [innerHTML]="item.date"></h3>
           <p [innerHTML]="item.time"></p>
           <p [innerHTML]="item.location"><ion-icon name="pin"></ion-icon></p>
-          <button ion-button round color="knallorange" (click)="showEventDetails(item)">Details
+          <button ion-button round class="btn-details" color="knallorange" (click)="showEventDetails(item)">Details
             <ion-icon name="arrow-forward"></ion-icon>
           </button>
         </ion-slide>

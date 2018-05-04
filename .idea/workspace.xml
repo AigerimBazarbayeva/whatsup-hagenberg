@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+    <list id="27f0cc51-38ce-4ae6-b79f-24e3b494ffa0" name="Failed commit: Default" comment="Commit directory once again" />
     <list default="true" id="f421ec34-bda3-4825-bf02-c67ae2e35678" name="Default" comment="Commit directory">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/whatsup-hagenberg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/whatsup-hagenberg.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/whatsup/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/whatsup/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatsup/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatsup/src/pages/detail/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/src/pages/detail/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatsup/src/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/src/pages/home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatsup/src/pages/home/home.ts" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/src/pages/home/home.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/icon/drawable-hdpi-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/icon/drawable-hdpi-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/icon/drawable-ldpi-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/icon/drawable-ldpi-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/icon/drawable-mdpi-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/icon/drawable-mdpi-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/icon/drawable-xhdpi-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/icon/drawable-xhdpi-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/icon/drawable-xxhdpi-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/icon/drawable-xxhdpi-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/icon/drawable-xxxhdpi-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/icon/drawable-xxxhdpi-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-land-hdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-land-hdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-land-ldpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-land-ldpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-land-mdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-land-mdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-land-xhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-land-xhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-land-xxhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-land-xxhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-land-xxxhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-land-xxxhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-port-hdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-port-hdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-port-ldpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-port-ldpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-port-mdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-port-mdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-port-xhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-port-xhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-port-xxhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-port-xxhdpi-screen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-port-xxxhdpi-screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/whatsup/resources/android/splash/drawable-port-xxxhdpi-screen.png" afterDir="false" />
     </list>
-    <list id="27f0cc51-38ce-4ae6-b79f-24e3b494ffa0" name="Failed commit: Default" comment="Commit directory once again" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +41,8 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/whatsup/src/pages/home/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+            <state relative-caret-position="720">
+              <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -59,11 +72,20 @@
       <file leaf-file-name="home.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/whatsup/src/pages/home/home.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="21" column="84" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
+            <state relative-caret-position="314">
+              <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/whatsup/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -85,6 +107,7 @@
         <option value="$PROJECT_DIR$/whatsup/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/whatsup/src/pages/detail/detail.html" />
         <option value="$PROJECT_DIR$/whatsup/src/pages/home/home.html" />
+        <option value="$PROJECT_DIR$/whatsup/package.json" />
         <option value="$PROJECT_DIR$/whatsup/src/pages/home/home.ts" />
       </list>
     </option>
@@ -101,6 +124,14 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/whatsup/package.json" />
+      <path value="$PROJECT_DIR$/whatsup/plugins/cordova-plugin-device/package.json" />
+      <path value="$PROJECT_DIR$/whatsup/plugins/cordova-plugin-device/tests/package.json" />
+      <path value="$PROJECT_DIR$/whatsup/plugins/cordova-plugin-ionic-keyboard/package.json" />
+      <path value="$PROJECT_DIR$/whatsup/plugins/cordova-plugin-ionic-webview/package.json" />
+      <path value="$PROJECT_DIR$/whatsup/plugins/cordova-plugin-splashscreen/package.json" />
+      <path value="$PROJECT_DIR$/whatsup/plugins/cordova-plugin-splashscreen/tests/ios/package.json" />
+      <path value="$PROJECT_DIR$/whatsup/plugins/cordova-plugin-splashscreen/tests/package.json" />
+      <path value="$PROJECT_DIR$/whatsup/plugins/cordova-plugin-whitelist/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
@@ -185,6 +216,7 @@
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
     <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
@@ -296,7 +328,7 @@
       <workItem from="1525197768422" duration="3604000" />
       <workItem from="1525218403875" duration="382000" />
       <workItem from="1525265074974" duration="761000" />
-      <workItem from="1525380891994" duration="8732000" />
+      <workItem from="1525380891994" duration="12250000" />
     </task>
     <task id="LOCAL-00001" summary="Commit directory">
       <created>1523971246660</created>
@@ -337,17 +369,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17914000" />
+    <option name="totallyTimeSpent" value="21432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="10" sideWeight="0.49391857" weight="0.3295583" />
-      <window_info content_ui="combo" x="97" y="242" width="472" height="588" id="Project" order="6" weight="0.25078124" />
+      <window_info content_ui="combo" x="97" y="242" width="472" height="588" id="Project" order="6" visible="true" weight="0.25078124" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.45078126" side_tool="true" weight="0.32598424" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.328877" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32990867" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.24960339" />
       <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.5492188" visible="true" weight="0.27673796" />
@@ -388,20 +420,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Commit directory once again" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/whatsup/src/pages/home/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/whatsup/src/pages/detail/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/whatsup/src/app/app.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -593,6 +611,16 @@
     <entry file="file://$PROJECT_DIR$/whatsup/src/theme/variables.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/whatsup/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/whatsup/src/pages/detail/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/whatsup/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -606,22 +634,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/whatsup/src/pages/home/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+        <state relative-caret-position="720">
+          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/whatsup/src/pages/detail/detail.html">
+    <entry file="file://$PROJECT_DIR$/whatsup/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        <state relative-caret-position="284">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/whatsup/src/pages/home/home.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="21" column="84" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
+        <state relative-caret-position="314">
+          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>

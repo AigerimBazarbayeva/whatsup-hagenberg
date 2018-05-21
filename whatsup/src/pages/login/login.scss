@@ -5,3 +5,27 @@
   color: #f4f4f4;
   padding-top: 130px !important;
 }
+
+.signUp{
+  background-color: #1c2535 !important;
+  align-items: center;
+  height: 100%;
+  color: #f4f4f4;
+  padding-top: 60px !important;
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #f4f4f4;
+  background-color: #f4f4f4;
+}
+
+a:hover {
+  color: #e79500;
+}

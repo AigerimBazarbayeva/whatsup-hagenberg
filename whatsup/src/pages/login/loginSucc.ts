@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {SignUpPage} from "./signUp";
 import {LoggedInHomePage} from "../loggedInHome/loggedInHome";
 
 /**
@@ -11,25 +10,20 @@ import {LoggedInHomePage} from "../loggedInHome/loggedInHome";
  */
 
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-loginSucc',
+  templateUrl: 'loginSucc.html',
 })
-export class LoginPage {
+export class LoginSuccPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
-
-  showSignUpPage() {
-    this.navCtrl.push(SignUpPage, {
-    });
+    console.log('ionViewDidLoad LoginSuccPage');
   }
 
   showLoggedInHomePage() {
-    this.navCtrl.push(LoggedInHomePage, {
-    });
+  this.navCtrl.push(LoggedInHomePage, {
+  });
   }
 }

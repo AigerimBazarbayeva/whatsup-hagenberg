@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {LoginSuccPage} from "./loginSucc";
 
 /**
  * Generated class for the LoginPage page.
@@ -21,5 +22,9 @@ export class SignUpPage {
     console.log('ionViewDidLoad SignUpPage');
   }
 
+  showLoginSuccPage() {
+    this.navCtrl.push(LoginSuccPage, {
+    });
+  }
 
 }

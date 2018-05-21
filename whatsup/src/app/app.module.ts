@@ -9,6 +9,9 @@ import { EventPage } from '../pages/home/home';
 import { DetailPage } from '../pages/detail/detail';
 import { LoginPage } from '../pages/login/login';
 import {SignUpPage} from "../pages/login/signUp";
+import {LoginSuccPage} from "../pages/login/loginSucc";
+import {LoggedInHomePage} from "../pages/loggedInHome/loggedInHome";
+import {ProfilePage} from "../pages/profile/profile";
 
 
 // Import the AF2 Module
@@ -32,7 +35,10 @@ export const firebaseConfig = {
     EventPage,
     DetailPage,
     LoginPage,
-    SignUpPage
+    SignUpPage,
+    LoginSuccPage,
+    LoggedInHomePage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -46,7 +52,10 @@ export const firebaseConfig = {
     EventPage,
     DetailPage,
     LoginPage,
-    SignUpPage
+    SignUpPage,
+    LoginSuccPage,
+    LoggedInHomePage,
+    ProfilePage
   ],
   providers: [
     StatusBar,

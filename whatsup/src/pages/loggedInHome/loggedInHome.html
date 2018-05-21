@@ -5,13 +5,16 @@
     </ion-buttons>
     <ion-title></ion-title>
     <ion-buttons end>
-      <button ion-button icon-only color="royal" (click)="showLoginPage()">
-        Login&nbsp;<ion-icon name="contact"></ion-icon>
+      <button ion-button icon-only color="royal" (click)="showLoginPage()">Logout</button>
+      <button ion-button icon-right (click)="showProfilePage()">
+        <ion-thumbnail item-start>
+          <img width="28px" height="28px" src="../../assets/imgs/profilpic1.png">
+        </ion-thumbnail>
       </button>
     </ion-buttons>
   </ion-toolbar>
 
-  <ion-navbar color="dunkelblue" no-border-bottom>
+  <ion-navbar color="dunkelblue" hideBackButton no-border-bottom>
     <ion-title>
       Events
     </ion-title>

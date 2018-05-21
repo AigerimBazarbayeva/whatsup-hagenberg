@@ -16,7 +16,7 @@
   <!--img src="../../assets/imgs/whatsup-hagenberg.png"-->
   <h2 color="light" padding-top text-uppercase>Login</h2>
 
-  <form (ngSubmit)="register()" #registerForm="ngForm">
+  <form> <!--(ngSubmit)="register()" #registerForm="ngForm">-->
     <ion-row>
       <ion-col>
         <ion-list>
@@ -35,7 +35,7 @@
 
     <ion-row>
       <ion-col class="signup-col">
-        <button ion-button  round class="btn-login" full type="login" >Login</button>
+        <button ion-button  round class="btn-login" full type="login" (click)="showLoggedInHomePage()">Login</button>
       </ion-col>
     </ion-row>
 

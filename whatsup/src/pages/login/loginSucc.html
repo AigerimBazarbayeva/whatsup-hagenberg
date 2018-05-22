@@ -12,11 +12,14 @@
         <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
       </button>
     </ion-buttons>
+    <ion-buttons end>
+      <img src="../../assets/imgs/LogoW.png" width="125" padding-right="10px">
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content>
+<ion-content no-bounce>
 
   <div class="loginSucc" padding text-center>
     <img src="../../assets/imgs/success" width="90">
@@ -26,15 +29,15 @@
 
     <form> <!--(ngSubmit)="register()" #registerForm="ngForm">-->
       <ion-row>
-        <ion-col>
+        <ion-col style="padding-left: 55px; padding-top: 20px;">
           <ion-list>
 
-            <ion-item>
-              <ion-input type="text" placeholder="Username" name="username"  required></ion-input>
+            <ion-item no-lines style=" width: 80%; background-color: #1c2535; border-style: solid; border-color: #f4f4f4; border-width: 1px; border-radius: 35px;">
+              <ion-input text-center type="text" placeholder="Username" name="username" style="color: #f4f4f4;" required></ion-input>
             </ion-item>
-
-            <ion-item>
-              <ion-input type="password" placeholder="Password" name="password"  required></ion-input>
+            <br>
+            <ion-item no-lines style=" width: 80%; background-color: #1c2535; border-style: solid; border-color: #f4f4f4; border-width: 1px; border-radius: 35px;">
+              <ion-input text-center type="password" placeholder="Password" name="password"  style="color: #f4f4f4;" required></ion-input>
             </ion-item>
 
           </ion-list>

@@ -6,34 +6,36 @@
 -->
 <ion-header>
 <ion-navbar color="reallydark">
-
+  <ion-buttons end>
+  <img src="../../assets/imgs/LogoW.png" width="125" padding-right="10px">
+  </ion-buttons>
 </ion-navbar>
 
 </ion-header>
 
 
-<ion-content>
+<ion-content no-bounce>
 
   <div class="login" padding text-center>
-  <!--img src="../../assets/imgs/whatsup-hagenberg.png"-->
+
   <h2 color="light" padding-top text-uppercase>Login</h2>
 
-  <form> <!--(ngSubmit)="register()" #registerForm="ngForm">-->
-    <ion-row>
-      <ion-col>
-        <ion-list>
+    <form> <!--(ngSubmit)="register()" #registerForm="ngForm">-->
+      <ion-row>
+        <ion-col style="padding-left: 55px; padding-top: 20px;">
+          <ion-list>
 
-          <ion-item>
-            <ion-input type="text" placeholder="Username" name="username"  required></ion-input>
-          </ion-item>
+            <ion-item no-lines style=" width: 80%; background-color: #1c2535; border-style: solid; border-color: #f4f4f4; border-width: 1px; border-radius: 35px;">
+              <ion-input text-center type="text" placeholder="Username" name="username" style="color: #f4f4f4;" required></ion-input>
+            </ion-item>
+            <br>
+            <ion-item no-lines style=" width: 80%; background-color: #1c2535; border-style: solid; border-color: #f4f4f4; border-width: 1px; border-radius: 35px;">
+              <ion-input text-center type="password" placeholder="Password" name="password"  style="color: #f4f4f4;" required></ion-input>
+            </ion-item>
 
-          <ion-item>
-            <ion-input type="password" placeholder="Password" name="password"  required></ion-input>
-          </ion-item>
-
-        </ion-list>
-      </ion-col>
-    </ion-row>
+          </ion-list>
+        </ion-col>
+      </ion-row>
 
     <ion-row>
       <ion-col class="signup-col">

@@ -12,13 +12,16 @@
       <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
     </button>
   </ion-buttons>
+  <ion-buttons end>
+    <img src="../../assets/imgs/LogoW.png" width="125" padding-right="10px">
+  </ion-buttons>
 
 </ion-toolbar>
 
 </ion-header>
 
 
-<ion-content>
+<ion-content no-bounce>
 
   <div class="signUp" padding text-center>
     <!--img src="../../assets/imgs/whatsup-hagenberg.png"-->
@@ -27,19 +30,19 @@
 
   <form>
     <ion-row>
-      <ion-col>
+      <ion-col style="padding-left: 55px; padding-top: 20px;">
         <ion-list>
 
-          <ion-item>
-            <ion-input type="text" placeholder="Full Name" name="fullname"  required></ion-input>
+          <ion-item no-lines style=" width: 80%; background-color: #1c2535; border: 1px; border-style: solid; border-color: #1c2535; border-bottom-color: #f4f4f4;">
+            <ion-input text-center type="text" placeholder="Full Name" name="fullname"  style="color: #f4f4f4;" required></ion-input>
           </ion-item>
 
-          <ion-item>
-            <ion-input type="password" placeholder="Password" name="password"  required></ion-input>
+          <ion-item no-lines style=" width: 80%; background-color: #1c2535; border: 1px; border-style: solid; border-color: #1c2535; border-bottom-color: #f4f4f4;">
+            <ion-input text-center type="password" placeholder="Password" name="password"  style="color: #f4f4f4;" required></ion-input>
           </ion-item>
 
-          <ion-item>
-            <ion-input type="password" placeholder="Repeat Password" name="rppassword"  required></ion-input>
+          <ion-item no-lines style=" width: 80%; background-color: #1c2535; border: 1px; border-style: solid; border-color: #1c2535; border-bottom-color: #f4f4f4;">
+            <ion-input text-center type="password" placeholder="Repeat Password" name="rppassword"  style="color: #f4f4f4;" required></ion-input>
           </ion-item>
 
         </ion-list>

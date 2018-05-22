@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {LoginSuccPage} from "./loginSucc";
+import { ModalController, NavParams } from 'ionic-angular';
+import {EventPage} from "../home/home";
 
 /**
  * Generated class for the LoginPage page.
@@ -15,7 +17,7 @@ import {LoginSuccPage} from "./loginSucc";
 })
 export class SignUpPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -27,4 +29,9 @@ export class SignUpPage {
     });
   }
 
+  close(){
+    this.navCtrl.push(EventPage, {
+
+    });
+  }
 }

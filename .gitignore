@@ -13,10 +13,6 @@ log.txt
 npm-debug.log*
 
 .idea/
-.idea/misc.xml
-.idea/whatsup-hagenberg.iml
-.idea/workspace.xml
-
 .sourcemaps/
 .sass-cache/
 .tmp/

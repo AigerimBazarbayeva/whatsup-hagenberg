@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController} from 'ionic-angular';
 import {LoginSuccPage} from "./loginSucc";
-//import { ModalController, NavParams } from 'ionic-angular';
 import {EventPage} from "../home/home";
+import {AngularFireDatabase} from "angularfire2/database";
+import * as firebase from "firebase";
 
 /**
  * Generated class for the LoginPage page.
@@ -17,7 +18,12 @@ import {EventPage} from "../home/home";
 })
 export class SignUpPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) { //, public modalCtrl: ModalController
+  username = "";
+  password = "";
+  rpassword = "";
+
+  constructor(public navCtrl: NavController, public afDB: AngularFireDatabase) {
+
   }
 
   ionViewDidLoad() {
@@ -31,7 +37,21 @@ export class SignUpPage {
 
   close(){
     this.navCtrl.push(EventPage, {
-
     });
+  }
+
+  signUp() {
+    if (this.password != this.rpassword) {
+      this.navCtrl.push(SignUpPage);
+      return;
+    }
+    const navControl = this.navCtrl;
+    firebase.auth().createUserWithEmailAndPassword(this.username, this.password)
+      .then(function (result) {
+        navControl.push(LoginSuccPage);
+      },
+      function (err) {
+        navControl.push(SignUpPage);
+      });
   }
 }

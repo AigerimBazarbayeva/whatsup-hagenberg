@@ -1,0 +1,55 @@
+page-profile{
+
+    body {
+      overflow-y: hidden;
+    }
+
+    .slide-zoom {
+      height: 100%;
+    }
+
+    .slide-title {
+      margin-top: 2rem;
+      font-size: 28px;
+    }
+
+    .slider-pager {
+      padding: 0 auto;
+      margin: 0 auto;
+    }
+
+    .slide-image {
+      height: 120px;
+    }
+
+    b {
+      font-weight: 500;
+    }
+
+    p {
+      padding: 0;
+      font-size: 16px;
+      line-height: 0.5em;
+      color: #000000;
+
+      b {
+        color: #000000;
+      }
+    }
+    ion-icon {
+      width: 50px;
+    }
+
+  .profileImg {
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .username {
+    padding-top: 15px;
+  }
+
+}
+
+

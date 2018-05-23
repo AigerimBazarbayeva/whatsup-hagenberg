@@ -1,19 +1,40 @@
 
 <ion-header>
-  <ion-toolbar color="reallydark">
+  <ion-navbar color="reallydark" no-border-bottom>
+    <ion-title>
+    </ion-title>
     <ion-buttons start>
     </ion-buttons>
-    <ion-title></ion-title>
     <ion-buttons end>
-      <button ion-button icon-only color="royal" (click)="showLoginPage()">
-        Login&nbsp;<ion-icon name="contact"></ion-icon>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="settings"></ion-icon>
       </button>
     </ion-buttons>
-  </ion-toolbar>
+  </ion-navbar>
 
-  <ion-navbar  color="dunkelblue" no-border-bottom hideBackButton>
+  <ion-grid style="background-color: #f4f4f4">
+    <ion-row>
+      <ion-col>
+        <div class="profileImg">
+          <ion-thumbnail item-start>
+            <img width="100px" height="100px" src="../../assets/imgs/profilpic1.png">
+          </ion-thumbnail>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="username">
+          <p>Username</p>
+        </div>
+        <div class="userinfo">
+          <p>23, FH Hagenberg</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-navbar color="dunkelblue" hideBackButton no-border-bottom>
     <ion-title>
-      Events
+      My Events
     </ion-title>
   </ion-navbar>
 
@@ -29,7 +50,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content no-bounce>
+<ion-content>
   <div [ngSwitch]="eventType">
     <ion-list *ngSwitchCase="'upcoming'">
       <ion-slides pager>
@@ -39,7 +60,7 @@
           <h3 [innerHTML]="item.date"></h3>
           <p [innerHTML]="item.time"></p>
           <p [innerHTML]="item.location"><ion-icon name="pin"></ion-icon></p>
-          <button ion-button round class="btn-details" color="knallorange" (click)="showEventDetails(item)">Details
+          <button ion-button round class="btn-details" color="knallorange">Details
             <ion-icon name="arrow-forward"></ion-icon>
           </button>
         </ion-slide>

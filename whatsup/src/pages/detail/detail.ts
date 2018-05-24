@@ -95,7 +95,6 @@ export class DetailPage {
           text: 'Login',
           handler: data => {
             navControl.push(LoginPage);
-
           }
         }
       ]
@@ -117,5 +116,4 @@ export class DetailPage {
   showHomePage(){
     this.navCtrl.push(EventPage, {});
   }
-
 }

@@ -33,17 +33,17 @@
 </ion-header>
 
 <ion-content no-bounce>
-  <div [ngSwitch]="eventType">
+  <div class="slides-content" [ngSwitch]="eventType">
     <ion-list *ngSwitchCase="'upcoming'">
       <ion-slides pager>
         <ion-slide *ngFor="let item of upcomingEventList | async" >
           <img [src]="item.image" class="slide-image"/>
           <h2 class="slide-title" [innerHTML]="item.text"></h2>
           <h3 [innerHTML]="item.date"></h3>
-          <p [innerHTML]="item.time"></p>
-          <p [innerHTML]="item.location"><ion-icon name="pin"></ion-icon></p>
+          <p [innerHTML]="' Starts at '+ item.time +' oClock'"></p>
+          <p><span class="pin"><ion-icon name="pin"></ion-icon></span><span class="location" [innerHTML]="item.location"></span></p>
           <button ion-button round class="btn-details" color="knallorange" (click)="showEventDetails(item)">Details
-            <ion-icon name="arrow-forward"></ion-icon>
+            <ion-icon class="forward-arrow" name="arrow-forward"></ion-icon>
           </button>
         </ion-slide>
       </ion-slides>
@@ -55,10 +55,10 @@
           <img [src]="item.image" class="slide-image"/>
           <h2 class="slide-title" [innerHTML]="item.text"></h2>
           <h3 [innerHTML]="item.date"></h3>
-          <p [innerHTML]="item.time"></p>
-          <p [innerHTML]="item.location"><ion-icon name="pin"></ion-icon></p>
+          <p [innerHTML]="' Starts at '+ item.time +' oClock'"></p>
+          <p><span class="pin"><ion-icon name="pin"></ion-icon></span><span class="location" [innerHTML]="item.location"></span></p>
           <button ion-button round class="btn-details" color="knallorange" (click)="showEventDetails(item)">Details
-            <ion-icon name="arrow-forward"></ion-icon>
+            <ion-icon class="forward-arrow" name="arrow-forward"></ion-icon>
           </button>
         </ion-slide>
       </ion-slides>

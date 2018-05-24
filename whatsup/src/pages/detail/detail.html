@@ -27,7 +27,7 @@
   <div class="detail-header">
   <div class="top-image">
   <img [src]="item.image" class="slide-image"/>
-
+  </div>
   <button class="btn-join" ion-button color="hellesblue" round icon-start *ngIf="!isJoined"  (click)="joinEvent()">
     <ion-icon name='add' is-active="false"></ion-icon>
     Join Event
@@ -35,6 +35,7 @@
     <button class="btn-join" ion-button color="hellesblue" round icon-start *ngIf="isJoined">
       Already joined
     </button>
+  </div>
 
   <div padding-left padding-right padding-bottom padding-top>
   <h2 class="details-title" [innerHTML]="item.text"></h2>
@@ -42,7 +43,6 @@
   <p [innerHTML]="' Starts at '+ item.time +' oClock'"></p>
   <p><span class="pin"><ion-icon class="pin" name="pin"></ion-icon></span><span class="location" [innerHTML]="item.location"></span></p>
   <p [innerHTML]="item.details"></p>
-
 
   <ion-fab right bottom>
     <button ion-fab color="danger"><ion-icon name="md-share"></ion-icon></button>

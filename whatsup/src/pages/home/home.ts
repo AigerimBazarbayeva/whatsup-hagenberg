@@ -5,6 +5,7 @@ import {DetailPage} from '../detail/detail';
 import {LoginPage} from '../login/login';
 import {AngularFireDatabase, AngularFireList} from "angularfire2/database";
 import {Observable} from "rxjs/Observable";
+import * as firebase from "firebase";
 
 @Component({
   selector: 'page-home',
@@ -17,6 +18,7 @@ export class EventPage {
   todayEvent: Observable<any[]>;
   upcomingEvent: Observable<any[]>;
 
+  isLogin: boolean;
 
   constructor(public navCtrl: NavController,
               public afDB: AngularFireDatabase) {
@@ -26,6 +28,14 @@ export class EventPage {
     this.todayEvent = this.todayEventList.valueChanges();
     this.upcomingEventList = this.afDB.list('/events');
     this.upcomingEvent = this.upcomingEventList.valueChanges().map(qis => qis.filter(q => q.date != dateString));
+
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+      this.isLogin = true;
+    } else {
+      this.isLogin = false;
+    }
   }
 
   showEventDetails(item) {
@@ -34,9 +44,13 @@ export class EventPage {
     });
   }
 
-  showLoginPage() {
-    this.navCtrl.push(LoginPage, {
-    });
+  logout(){
+    firebase.auth().signOut();
+    this.navCtrl.push(EventPage, {});
+  }
+
+  login(){
+    this.navCtrl.push(LoginPage, {});
   }
 }
 

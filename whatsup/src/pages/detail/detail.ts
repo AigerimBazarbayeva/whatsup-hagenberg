@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { LoginPage} from '../login/login'
+import * as firebase from "firebase";
+import {AngularFireDatabase} from "angularfire2/database";
 
 /**
  * Generated class for the DetailPage page.
@@ -16,12 +18,39 @@ import { LoginPage} from '../login/login'
 })
 export class DetailPage {
   item: any;
+  isLogin : boolean;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public alertCtrl: AlertController,  public afDB: AngularFireDatabase) {
     this.item = navParams.get('item');
+    this.afDB = afDB;
+
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+      this.isLogin = true;
+    } else {
+      this.isLogin = false;
+    }
   }
 
-  showPrompt() {
+  joinEvent() {
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+      this.joinUserToEvent(user);
+
+    } else {
+      this.showPrompt();
+    }
+  }
+
+  joinUserToEvent(user){
+    //this.afDB.list("/events").update(this.item.)
+  }
+
+  showPrompt(){
+    const navControl = this.navCtrl;
     let prompt = this.alertCtrl.create({
       title: 'LOGIN REQUIRED',
       message: "For joining an event, you have to be logged in.",
@@ -35,7 +64,8 @@ export class DetailPage {
         {
           text: 'Login',
           handler: data => {
-            console.log('Login clicked');
+            navControl.push(LoginPage);
+
           }
         }
       ]
@@ -43,13 +73,15 @@ export class DetailPage {
     prompt.present();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DetailPage');
+  logout(){
+    firebase.auth().signOut();
+    this.navCtrl.push(DetailPage, {
+      item: this.item
+    });
   }
 
-  showLoginPage() {
-  this.navCtrl.push(LoginPage, {
-    });
+  login(){
+    this.navCtrl.push(LoginPage, {});
   }
 
 }

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {SignUpPage} from "./signUp";
-import {LoggedInHomePage} from "../loggedInHome/loggedInHome";
+import * as firebase from "firebase";
+import {EventPage} from "../home/home";
 
 /**
  * Generated class for the LoginPage page.
@@ -15,12 +16,10 @@ import {LoggedInHomePage} from "../loggedInHome/loggedInHome";
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  username = "";
+  password = "";
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
   }
 
   showSignUpPage() {
@@ -28,8 +27,17 @@ export class LoginPage {
     });
   }
 
-  showLoggedInHomePage() {
-    this.navCtrl.push(LoggedInHomePage, {
-    });
+  login(){
+    const navControl = this.navCtrl;
+    firebase.auth().signInWithEmailAndPassword(this.username, this.password)
+      .then(function (result) {
+          navControl.push(EventPage);
+        },
+        function (err) {
+          navControl.push(LoginPage);
+        });
   }
+
+
 }
+

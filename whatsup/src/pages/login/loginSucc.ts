@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {LoggedInHomePage} from "../loggedInHome/loggedInHome";
-//import { ModalController, NavParams } from 'ionic-angular';
 import {EventPage} from "../home/home";
 
 /**
@@ -20,12 +18,8 @@ export class LoginSuccPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) { //, public modalCtrl: ModalController
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginSuccPage');
-  }
-
   showLoggedInHomePage() {
-  this.navCtrl.push(LoggedInHomePage, {
+  this.navCtrl.push(EventPage, {
   });
   }
 

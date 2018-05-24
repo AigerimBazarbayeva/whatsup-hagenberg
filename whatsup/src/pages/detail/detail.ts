@@ -4,6 +4,7 @@ import { AlertController } from 'ionic-angular';
 import { LoginPage} from '../login/login'
 import * as firebase from "firebase";
 import {AngularFireDatabase} from "angularfire2/database";
+import {EventPage} from "../home/home";
 
 /**
  * Generated class for the DetailPage page.
@@ -19,6 +20,7 @@ import {AngularFireDatabase} from "angularfire2/database";
 export class DetailPage {
   item: any;
   isLogin : boolean;
+  isJoined: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public alertCtrl: AlertController,  public afDB: AngularFireDatabase) {
@@ -31,6 +33,12 @@ export class DetailPage {
       this.isLogin = true;
     } else {
       this.isLogin = false;
+    }
+
+    if (user && this.item.joinedUsers && this.item.joinedUsers.indexOf(user.email) >= 0){
+      this.isJoined = true;
+    } else{
+      this.isJoined = false;
     }
   }
 
@@ -45,8 +53,30 @@ export class DetailPage {
     }
   }
 
-  joinUserToEvent(user){
-    //this.afDB.list("/events").update(this.item.)
+  joinUserToEvent(user: firebase.User){
+    var newItem = {
+      date: this.item.date,
+      details: this.item.details,
+      image: this.item.image,
+      location: this.item.location,
+      text: this.item.text,
+      time: this.item.time,
+      joinedUsers: [],
+      key: this.item.key
+    };
+
+
+    const navControl = this.navCtrl;
+
+    if (this.item.joinedUsers){
+      newItem.joinedUsers = this.item.joinedUsers;
+    }
+    newItem.joinedUsers.push(user.email);
+    this.afDB.object("/events/" + this.item.key).update(newItem).then(function (result) {
+      navControl.push(DetailPage, {
+        item: newItem
+      });
+    })
   }
 
   showPrompt(){
@@ -82,6 +112,10 @@ export class DetailPage {
 
   login(){
     this.navCtrl.push(LoginPage, {});
+  }
+
+  showHomePage(){
+    this.navCtrl.push(EventPage, {});
   }
 
 }

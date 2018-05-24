@@ -36,7 +36,7 @@
   <div [ngSwitch]="eventType">
     <ion-list *ngSwitchCase="'upcoming'">
       <ion-slides pager>
-        <ion-slide *ngFor="let item of upcomingEvent | async" >
+        <ion-slide *ngFor="let item of upcomingEventList | async" >
           <img [src]="item.image" class="slide-image"/>
           <h2 class="slide-title" [innerHTML]="item.text"></h2>
           <h3 [innerHTML]="item.date"></h3>
@@ -51,7 +51,7 @@
 
     <ion-list *ngSwitchCase="'today'">
       <ion-slides pager >
-        <ion-slide *ngFor="let item of todayEvent | async">
+        <ion-slide *ngFor="let item of todayEventList | async">
           <img [src]="item.image" class="slide-image"/>
           <h2 class="slide-title" [innerHTML]="item.text"></h2>
           <h3 [innerHTML]="item.date"></h3>

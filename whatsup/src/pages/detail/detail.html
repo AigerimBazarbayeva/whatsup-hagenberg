@@ -7,6 +7,9 @@
 <ion-header>
   <ion-navbar color="reallydark">
     <ion-buttons start>
+      <button ion-button icon-only color="royal" (click)="showHomePage()">
+      <ion-icon name="home"></ion-icon>
+      </button>
     </ion-buttons>
     <ion-title></ion-title>
     <ion-buttons end>
@@ -23,10 +26,14 @@
 <ion-content>
   <div>
   <img [src]="item.image" class="slide-image"/>
-  <button class="btn-join" ion-button color="hellesblue" round icon-start (click)="joinEvent()">
+  <button class="btn-join" ion-button color="hellesblue" round icon-start *ngIf="!isJoined"  (click)="joinEvent()">
     <ion-icon name='add' is-active="false"></ion-icon>
     Join Event
   </button>
+    <button class="btn-join" ion-button color="hellesblue" round icon-start *ngIf="isJoined">
+      Already joined
+    </button>
+
   </div>
   <div padding-left padding-right padding-bottom>
   <h2 class="details-title" [innerHTML]="item.text"></h2>
@@ -55,8 +62,6 @@
   <ion-fab left bottom>
     <button ion-fab color="knallorange"><ion-icon name="pin"></ion-icon></button>
   </ion-fab>
-
-
 
   </div>
 

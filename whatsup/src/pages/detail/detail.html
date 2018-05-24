@@ -18,18 +18,20 @@
 </ion-header>
 
 <ion-content>
-  <div>
+  <div class="detail-header">
+  <div class="top-image">
   <img [src]="item.image" class="slide-image"/>
-  <button class="btn-join" ion-button color="hellesblue" round icon-start (click)="showPrompt()">
-    <ion-icon name='add' is-active="false"></ion-icon>
-    Join Event
-  </button>
   </div>
-  <div padding-left padding-right padding-bottom>
+    <button class="btn-join" ion-button color="hellesblue" round icon-start (click)="showPrompt()">
+      <ion-icon name='add' is-active="false"></ion-icon>
+      Join Event
+    </button>
+  </div>
+  <div padding-left padding-right padding-bottom padding-top>
   <h2 class="details-title" [innerHTML]="item.text"></h2>
   <h3 [innerHTML]="item.date"></h3>
-  <p [innerHTML]="item.time"></p>
-  <p [innerHTML]="item.location"><ion-icon name="pin"></ion-icon></p>
+  <p [innerHTML]="' Starts at '+ item.time +' oClock'"></p>
+  <p><span class="pin"><ion-icon class="pin" name="pin"></ion-icon></span><span class="location" [innerHTML]="item.location"></span></p>
   <p [innerHTML]="item.details"></p>
 
 

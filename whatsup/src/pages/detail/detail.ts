@@ -9,6 +9,7 @@ import { LoginPage} from '../login/login'
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
+let _this;
 
 @Component({
   selector: 'page-detail',
@@ -19,6 +20,8 @@ export class DetailPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     this.item = navParams.get('item');
+    //noinspection JSAnnotator
+    _this = this.navCtrl;
   }
 
   showPrompt() {
@@ -36,20 +39,23 @@ export class DetailPage {
           text: 'Login',
           handler: data => {
             console.log('Login clicked');
+            showLoginPage();
           }
         }
       ]
     });
     prompt.present();
+
+    function showLoginPage() {
+      console.log();
+      _this.push(LoginPage, {
+      });
+    }
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
   }
 
-  showLoginPage() {
-  this.navCtrl.push(LoginPage, {
-    });
-  }
 
 }

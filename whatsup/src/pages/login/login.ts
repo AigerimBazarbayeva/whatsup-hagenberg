@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import {SignUpPage} from "./signUp";
 import * as firebase from "firebase";
 import {EventPage} from "../home/home";
+import {LoggedInHomePage} from "../loggedInHome/loggedInHome";
 
 /**
  * Generated class for the LoginPage page.
@@ -31,7 +32,7 @@ export class LoginPage {
     const navControl = this.navCtrl;
     firebase.auth().signInWithEmailAndPassword(this.username, this.password)
       .then(function (result) {
-          navControl.push(EventPage);
+          navControl.push(LoggedInHomePage);
         },
         function (err) {
           navControl.push(LoginPage);

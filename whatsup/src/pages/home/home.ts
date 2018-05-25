@@ -6,6 +6,7 @@ import {LoginPage} from '../login/login';
 import {AngularFireDatabase, AngularFireList} from "angularfire2/database";
 import {Observable} from "rxjs/Observable";
 import * as firebase from "firebase";
+import {LoggedInHomePage} from "../loggedInHome/loggedInHome";
 
 @Component({
   selector: 'page-home',
@@ -15,6 +16,7 @@ import * as firebase from "firebase";
 export class EventPage {
   todayEventList: Observable<any>;
   upcomingEventList: Observable<any>;
+  eventType: string="today";
 
   isLogin: boolean;
 

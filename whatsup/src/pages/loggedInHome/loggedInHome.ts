@@ -6,6 +6,8 @@ import {LoginPage} from '../login/login';
 import {AngularFireDatabase, AngularFireList} from "angularfire2/database";
 import {Observable} from "rxjs/Observable";
 import {ProfilePage} from "../profile/profile";
+import * as firebase from "firebase";
+import {EventPage} from "../home/home";
 
 @Component({
   selector: 'page-loggedInHome',
@@ -17,7 +19,8 @@ export class LoggedInHomePage {
   upcomingEventList: AngularFireList<any>;
   todayEvent: Observable<any[]>;
   upcomingEvent: Observable<any[]>;
-
+  isLogin: boolean;
+  eventType: string="today";
 
   constructor(public navCtrl: NavController,
               public afDB: AngularFireDatabase) {
@@ -27,6 +30,15 @@ export class LoggedInHomePage {
     this.todayEvent = this.todayEventList.valueChanges();
     this.upcomingEventList = this.afDB.list('/events');
     this.upcomingEvent = this.upcomingEventList.valueChanges().map(qis => qis.filter(q => q.date != dateString));
+
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+      this.isLogin = true;
+    } else {
+      this.isLogin = false;
+    }
+
   }
 
   showEventDetails(item) {
@@ -44,4 +56,14 @@ export class LoggedInHomePage {
     this.navCtrl.push(ProfilePage, {
     });
   }
+
+  logout(){
+    firebase.auth().signOut();
+    this.navCtrl.push(EventPage, {});
+  }
+
+  login(){
+    this.navCtrl.push(LoginPage, {});
+  }
+
 }

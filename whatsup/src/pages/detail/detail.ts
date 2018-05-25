@@ -5,6 +5,8 @@ import { LoginPage} from '../login/login'
 import * as firebase from "firebase";
 import {AngularFireDatabase} from "angularfire2/database";
 import {EventPage} from "../home/home";
+import {ProfilePage} from "../profile/profile";
+import {LoggedInHomePage} from "../loggedInHome/loggedInHome";
 
 /**
  * Generated class for the DetailPage page.
@@ -116,4 +118,9 @@ export class DetailPage {
   showHomePage(){
     this.navCtrl.push(EventPage, {});
   }
+  showloggedInPage() {
+    this.navCtrl.push(LoggedInHomePage, {
+    });
+  }
+
 }

@@ -16,6 +16,8 @@
 
 <ion-content no-bounce>
   <div class="login" padding text-center>
+    <img src="../../assets/imgs/success" *ngIf="isFromSignUp" width="90">
+    <p text-center *ngIf="isFromSignUp">Your Sign Up was successful!<br>Please log in below.</p>
   <h2 color="light" padding-top text-uppercase>Login</h2>
     <form>
       <ion-row>

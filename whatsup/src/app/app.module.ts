@@ -9,7 +9,6 @@ import { EventPage } from '../pages/home/home';
 import { DetailPage } from '../pages/detail/detail';
 import { LoginPage } from '../pages/login/login';
 import {SignUpPage} from "../pages/login/signUp";
-import {LoginSuccPage} from "../pages/login/loginSucc";
 import {ProfilePage} from "../pages/profile/profile";
 
 
@@ -37,7 +36,6 @@ export const firebaseConfig = {
     DetailPage,
     LoginPage,
     SignUpPage,
-    LoginSuccPage,
     ProfilePage,
   ],
   imports: [
@@ -53,7 +51,6 @@ export const firebaseConfig = {
     DetailPage,
     LoginPage,
     SignUpPage,
-    LoginSuccPage,
     ProfilePage
   ],
   providers: [

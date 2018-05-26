@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {DetailPage} from '../detail/detail';
 import {LoginPage} from '../login/login';
-import {AngularFireDatabase, AngularFireList} from "angularfire2/database";
+import {AngularFireDatabase} from "angularfire2/database";
 import {Observable} from "rxjs/Observable";
 import * as firebase from "firebase";
 import {ProfilePage} from "../profile/profile";
@@ -64,7 +64,9 @@ export class EventPage {
 
   // push to Login Page for Login
   login(){
-    this.navCtrl.push(LoginPage, {});
+    this.navCtrl.push(LoginPage, {
+      isFromSignUp : false
+    });
   }
 }
 

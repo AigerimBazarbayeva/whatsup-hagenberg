@@ -19,8 +19,10 @@ import {EventPage} from "../home/home";
 export class LoginPage {
   username = "";
   password = "";
+  isFromSignUp : boolean;
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, public navParams: NavParams) {
+    this.isFromSignUp = this.navParams.get("isFromSignUp");
   }
 
   // login function
@@ -37,6 +39,7 @@ export class LoginPage {
           navControl.push(EventPage);
         },
         function (err) { // error
+          console.log(err);
           alert.present(); // show alert on screen
         });
   }

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController} from 'ionic-angular';
-import {LoginSuccPage} from "./loginSucc";
 import {EventPage} from "../home/home";
 import { AlertController } from 'ionic-angular';
 import {AngularFireDatabase} from "angularfire2/database";
 import * as firebase from "firebase";
+import {LoginPage} from "./login";
 
 /**
  * Generated class for the SignUp page.
@@ -25,16 +25,6 @@ export class SignUpPage {
   rpassword = "";
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController, public afDB: AngularFireDatabase) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SignUpPage');
-  }
-
-  // push to LoginSucc, if the Sign Up progress was successfull
-  showLoginSuccPage() {
-    this.navCtrl.push(LoginSuccPage, {
-    });
   }
 
   // close function
@@ -58,7 +48,9 @@ export class SignUpPage {
     const navControl = this.navCtrl;
     firebase.auth().createUserWithEmailAndPassword(this.username, this.password)
       .then(function (result) {  // got to Login page if everything went right with the Sign Up
-        navControl.push(LoginSuccPage);
+        navControl.push(LoginPage, {
+          isFromSignUp : true
+        });
       },
       function (err) { //error
         alert.present(); // show alert on screen

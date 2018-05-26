@@ -100,7 +100,9 @@ export class DetailPage {
         {
           text: 'Login',
           handler: data => {
-            navControl.push(LoginPage);
+            navControl.push(LoginPage, {
+              isFromSignUp : false
+            });
           }
         }
       ]
@@ -118,7 +120,9 @@ export class DetailPage {
 
   // push to Login Page
   login(){
-    this.navCtrl.push(LoginPage, {});
+    this.navCtrl.push(LoginPage, {
+      isFromSignUp : false
+    });
   }
 
   // push to Home Page

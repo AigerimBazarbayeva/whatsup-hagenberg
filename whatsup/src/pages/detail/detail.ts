@@ -6,7 +6,6 @@ import * as firebase from "firebase";
 import {AngularFireDatabase} from "angularfire2/database";
 import {EventPage} from "../home/home";
 import {ProfilePage} from "../profile/profile";
-import {LoggedInHomePage} from "../loggedInHome/loggedInHome";
 
 /**
  * Generated class for the DetailPage page.
@@ -19,6 +18,7 @@ import {LoggedInHomePage} from "../loggedInHome/loggedInHome";
   selector: 'page-detail',
   templateUrl: 'detail.html',
 })
+
 export class DetailPage {
   item: any;
   isLogin : boolean;
@@ -31,6 +31,7 @@ export class DetailPage {
 
     var user = firebase.auth().currentUser;
 
+    // set variable for login status
     if (user) {
       this.isLogin = true;
     } else {
@@ -44,6 +45,7 @@ export class DetailPage {
     }
   }
 
+  // join event or show alert to log in
   joinEvent() {
     var user = firebase.auth().currentUser;
 
@@ -55,6 +57,7 @@ export class DetailPage {
     }
   }
 
+  // put the joined event data on firebase database
   joinUserToEvent(user: firebase.User){
     var newItem = {
       date: this.item.date,
@@ -81,6 +84,7 @@ export class DetailPage {
     })
   }
 
+  // show alert for login
   showPrompt(){
     const navControl = this.navCtrl;
     let prompt = this.alertCtrl.create({
@@ -104,6 +108,7 @@ export class DetailPage {
     prompt.present();
   }
 
+  // logout function, which sets the login/logout status
   logout(){
     firebase.auth().signOut();
     this.navCtrl.push(DetailPage, {
@@ -111,15 +116,19 @@ export class DetailPage {
     });
   }
 
+  // push to Login Page
   login(){
     this.navCtrl.push(LoginPage, {});
   }
 
+  // push to Home Page
   showHomePage(){
     this.navCtrl.push(EventPage, {});
   }
-  showloggedInPage() {
-    this.navCtrl.push(LoggedInHomePage, {
+
+  // push to User Profile
+  showProfilePage() {
+    this.navCtrl.push(ProfilePage, {
     });
   }
 

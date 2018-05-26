@@ -1,12 +1,11 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
-
 import {DetailPage} from '../detail/detail';
 import {LoginPage} from '../login/login';
 import {AngularFireDatabase, AngularFireList} from "angularfire2/database";
 import {Observable} from "rxjs/Observable";
 import * as firebase from "firebase";
-import {LoggedInHomePage} from "../loggedInHome/loggedInHome";
+import {ProfilePage} from "../profile/profile";
 
 @Component({
   selector: 'page-home',
@@ -17,11 +16,9 @@ export class EventPage {
   todayEventList: Observable<any>;
   upcomingEventList: Observable<any>;
   eventType: string="today";
-
   isLogin: boolean;
 
-  constructor(public navCtrl: NavController,
-              public afDB: AngularFireDatabase) {
+  constructor(public navCtrl: NavController, public afDB: AngularFireDatabase) {
     var dateString = new Date().toJSON().slice(0,10).split('-').reverse().join('.');
     this.todayEventList =
       this.afDB.list('/events', ref => ref.orderByChild("date").equalTo(dateString))
@@ -38,6 +35,7 @@ export class EventPage {
 
     var user = firebase.auth().currentUser;
 
+    // set variable for login status
     if (user) {
       this.isLogin = true;
     } else {
@@ -45,17 +43,26 @@ export class EventPage {
     }
   }
 
+  // push to Home/Eventdetail Page
   showEventDetails(item) {
     this.navCtrl.push(DetailPage, {
       item: item
     });
   }
 
+  // push to User Profile
+  showProfilePage() {
+    this.navCtrl.push(ProfilePage, {
+    });
+  }
+
+  // logout function, which sets the login/logout status
   logout(){
     firebase.auth().signOut();
     this.navCtrl.push(EventPage, {});
   }
 
+  // push to Login Page for Login
   login(){
     this.navCtrl.push(LoginPage, {});
   }

@@ -29,7 +29,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content no-bounce>
   <div class="detail-header">
     <div class="top-image"><img [src]="item.image" class="slide-image"/></div>
     <button class="btn-join" ion-button color="hellesblue" round icon-start *ngIf="!isJoined"  (click)="joinEvent()">
